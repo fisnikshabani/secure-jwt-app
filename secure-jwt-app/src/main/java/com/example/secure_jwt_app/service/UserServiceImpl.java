@@ -2,6 +2,7 @@ package com.example.secure_jwt_app.service;
 
 import com.example.secure_jwt_app.entity.UserEntity;
 import com.example.secure_jwt_app.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -14,6 +15,7 @@ public class UserServiceImpl implements UserDetailsService {
 
     private PasswordEncoder encoder;
 
+    @Autowired
     private UserRepository userRepository;
 
     @Override
